@@ -1,19 +1,18 @@
 //
-//  FactoryViewController.swift
+//  StrategyViewController.swift
 //  DesignPatternsDemo
 //
-//  Created by Guo Kebing on 2017/3/31.
+//  Created by Guo Kebing on 2017/4/1.
 //  Copyright © 2017年 MHQ. All rights reserved.
 //
 
 import UIKit
 
-class FactoryViewController: UIViewController {
+class StrategyViewController: UIViewController {
 
-    @IBOutlet weak var numATF: UITextField!
-    @IBOutlet weak var numBTF: UITextField!
+    @IBOutlet weak var itemSelected: UISegmentedControl!
+    @IBOutlet weak var moneyTF: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet weak var operationSelected: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,20 +24,20 @@ class FactoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func resultAction(_ sender: UIButton) {
-        var numA = 0.0
-        var numB = 0.0
-        if numATF.text?.isEmpty == false {
-            numA = Double(numATF.text!)!
-        }
-        if numBTF.text?.isEmpty == false {
-             numB = Double(numBTF.text!)!
+    @IBAction func Result(_ sender: UIButton) {
+        
+        let money = Double(moneyTF.text!)
+        
+        if money == nil {
+            
+            self.resultLabel.text = "请输入正确的金额"
+            
+            return
         }
         
-        let oper = OperationFactoty(operationType: operationType(rawValue: Int(self.operationSelected.selectedSegmentIndex))!)
-        let result = oper.result(with: numA, NumB: numB)
+        let cash = CashContext(cashType: CashType(rawValue: self.itemSelected.selectedSegmentIndex)!)
         
-        self.resultLabel.text = "\(result)"
+        self.resultLabel.text = "\(cash.getResult(with: money!))"
         
         
     }
