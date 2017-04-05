@@ -70,6 +70,31 @@
                                             <segue destination="au0-Wi-X6y" kind="push" id="MEL-Iz-uFo"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="gNP-8y-eDA">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gNP-8y-eDA" id="xwP-lp-HhX">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="装饰模式" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6C-4M-lxL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="w6C-4M-lxL" secondAttribute="bottom" id="2Ws-89-fcv"/>
+                                                <constraint firstAttribute="trailing" secondItem="w6C-4M-lxL" secondAttribute="trailing" id="aOf-Py-BQ5"/>
+                                                <constraint firstItem="w6C-4M-lxL" firstAttribute="top" secondItem="xwP-lp-HhX" secondAttribute="top" id="hHX-Rb-NbP"/>
+                                                <constraint firstItem="w6C-4M-lxL" firstAttribute="leading" secondItem="xwP-lp-HhX" secondAttribute="leading" id="k1I-mU-JKc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="L1W-8D-kUj" kind="push" id="W4P-zs-nJH"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -83,6 +108,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUd-9w-sfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1392.8" y="-125.4872563718141"/>
+        </scene>
+        <!--Decorator View Controller-->
+        <scene sceneID="L6m-tE-On9">
+            <objects>
+                <viewController id="L1W-8D-kUj" customClass="DecoratorViewController" customModule="DesignPatternsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YE4-39-GL1"/>
+                        <viewControllerLayoutGuide type="bottom" id="kWC-fu-9e4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YT2-Mw-YtW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SoT-2O-67o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tS9-6q-vHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2177" y="1055"/>
         </scene>
         <!--Strategy View Controller-->
         <scene sceneID="7zP-Ex-84A">
